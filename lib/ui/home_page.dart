@@ -7,7 +7,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = PageController(initialPage: 1);
+    final controller = PageController(initialPage: 0);
+    
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -20,9 +21,9 @@ class HomePage extends StatelessWidget {
                     controller: controller,
                     scrollDirection: Axis.vertical,
                     children: [
-                      MyPageWidget(video: 'assets/videos/videos1.mp4'),
-                      MyPageWidget(video: 'assets/videos/videos1.mp4'),
-                      MyPageWidget(video: 'assets/videos/videos1.mp4'),
+                      MyPageWidget(video: 'assets/videos/video-1.mp4'),
+                      MyPageWidget(video: 'assets/videos/video-2.mp4'),
+                      MyPageWidget(video: 'assets/videos/video-3.mp4'),
                     ],
                   ),
                   Column(
@@ -36,19 +37,16 @@ class HomePage extends StatelessWidget {
                           Text(
                             'Following',
                             style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold),
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
                           ),
-                          SizedBox(
-                            width: 10,
-                          ),
+                          SizedBox(width: 10),
                           Text(
                             '|',
                             style: TextStyle(color: Colors.white),
                           ),
-                          SizedBox(
-                            width: 10,
-                          ),
+                          SizedBox(width: 10),
                           Text(
                             'For You',
                             style: TextStyle(color: Colors.white),

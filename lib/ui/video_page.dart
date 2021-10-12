@@ -18,7 +18,6 @@ class _MyPageWidgetState extends State<MyPageWidget> {
     super.initState();
     _controller = VideoPlayerController.asset(widget.video)
       ..initialize().then((_) {
-        // Ensure the first frame is shown after the video is initialized, even before the play button has been pressed.
         setState(() {
           _controller.play();
           _controller.setLooping(true);
@@ -46,9 +45,6 @@ class _MyPageWidgetState extends State<MyPageWidget> {
                   )
                 : Container(),
           ),
-          // Expanded(
-          // Image.asset(widget.image, fit: BoxFit.fitWidth,),
-          // ),
           Padding(
             padding: EdgeInsets.all(8),
             child: Column(
